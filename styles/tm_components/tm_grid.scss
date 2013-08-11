@@ -1,0 +1,20 @@
+.tm-progressbar {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+
+    label {
+        float: left;
+    }
+    .bar {
+        background: #f00;
+        border-radius: 3px;
+        color: #fff;
+        overflow: hidden;
+        position: absolute;
+        width: 0%;
+    }
+}
