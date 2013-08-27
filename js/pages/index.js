@@ -6,9 +6,9 @@ define([
     // 'css!css_jquery-ui',
     'jquery-ui',
     'underscore',
-    'tm_grid'
+    'tm_grid',
+    'bullet_chart'
 ],
-
 function ($, css) {
     $(function() {
         console.log('Running jQuery %s', $().jquery);
@@ -37,10 +37,30 @@ function ($, css) {
                 }, objA),
             initial = 'init',
             progressbar = $('.percent')
-                .progressbar({value: 20});
+                .progressbar({value: 20}),
+            bulletChart = $('.chart').bulletchart({
+                size: 86,
+                bars: [
+                    { title: 'Projected Target', value: 75, css: '' },
+                    { title: 'Actual Target', value: 50, css: 'blue' }
+                ],
+                markers: [
+                    { title: 'Green Line', value: 80, css: 'green' },
+                    { title: 'Minimum Threshold', value: 50, css: 'red' }
+                ],
 
-        progressbar.progressbar('value', 10);
-        console.log(progressbar.progressbar('value'));
+                ticks: [0, 25, 50, 75, 100]
+            });
+
+        bulletChart.bulletchart('option', 'bars', [{
+            title : 'New Marker',
+            value : 50
+        }]);
+
+        console.log(bulletChart.bulletchart('option'))
+
+        // progressbar.progressbar('value', 10);
+        // console.log(progressbar.progressbar('value'));
 
         aryB = _.map(aryA, function(el, index, list) {
             return this.proA + el;

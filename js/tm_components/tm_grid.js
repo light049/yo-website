@@ -41,12 +41,13 @@ $.widget("tm.progressbar", {
         }
     },
     'value' : function(value) {
-        console.log('value func');
+        // console.log('get value');
         var progress;
 
         if ( value === undefined ) {
             return this.options.value;
         }
+        console.log('here start to set value')
 
         this.options.value = this._constrain( value );
         progress = this.options.value + '%';

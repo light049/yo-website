@@ -2,17 +2,19 @@ require.config({
     baseUrl: '',
     paths: {
         // 3rd party js libs define
-        'jquery'         : 'components/jquery/jquery',
-        'jquery-ui'      : 'components/jquery-ui/ui/jquery-ui',
-        'underscore'     : 'components/underscore/underscore',
+        'jquery'           : 'components/jquery/jquery',
+        'jquery-ui'        : 'components/jquery-ui/ui/jquery-ui',
+        'underscore'       : 'components/underscore/underscore',
 
         // customized js components
-        'tm_grid'        : 'js/tm_components/tm_grid',
+        'tm_grid'          : 'js/tm_components/tm_grid',
+        'bullet_chart'     : 'js/tm_components/bullet_chart',
 
         // stylesheets define
-        'css_main'       : 'styles/main',
-        'css_jquery-ui'  : 'components/jquery-ui/themes/ui-lightness/jquery-ui',
-        'css_tm_grid'    : 'styles/tm_components/tm_grid'
+        'css_main'         : 'styles/main',
+        'css_jquery-ui'    : 'components/jquery-ui/themes/ui-lightness/jquery-ui',
+        'css_tm_grid'      : 'styles/tm_components/tm_grid',
+        'css_bullet_chart' : 'styles/tm_components/bullet_chart'
     },
     map: {
         '*': {
@@ -20,13 +22,17 @@ require.config({
         }
     },
     shim: {
-        'jquery-ui'  : [
+        'jquery-ui'    : [
             'jquery',
             'css!css_jquery-ui'
         ],
-        'tm_grid'    : [
+        'tm_grid'      : [
             'jquery-ui',
             'css!css_tm_grid'
+        ],
+        'bullet_chart' : [
+            'jquery-ui',
+            'css!css_bullet_chart'
         ]
 
     }

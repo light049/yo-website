@@ -347,3 +347,6 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+iframe[main-data='innerFrame'] {
+  border: 1px solid green; }

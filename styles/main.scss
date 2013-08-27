@@ -1,2 +1,6 @@
 @import "../components/normalize-scss/normalize";
 // @import "../components/jquery-ui/themes/ui-lightness/jquery-ui";
+
+iframe[main-data='innerFrame'] {
+    border: 1px solid green;
+}
