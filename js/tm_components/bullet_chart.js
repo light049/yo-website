@@ -121,10 +121,19 @@ $.widget("light.bulletchart", {
             fnMap[key]();
 
             // fire event
-            // this._triggerOptionChanged( key, prev, value );
+            this._triggerOptionChanged( key, prev, value );
         }
 
         // console.log('setOption done!');
+    },
+    _triggerOptionChanged : function (optionKey, previousValue, currentValue) {
+        console.log('triggerOptionCganged!');
+
+        this._trigger('setOption', {type: 'setOption'}, {
+            option   : optionKey,
+            previous : previousValue,
+            current  : currentValue
+        });
     }
 });
 
@@ -133,13 +142,38 @@ $.widget('light.bulletchart_legned', $.light.bulletchart, {
         legend : true
     },
 
+    // this ensure we keep the same namespace as the base
     widgetEventPrefix : $.light.bulletchart.prototype.widgetEventPrefix,
 
     _create : function () {
+        var self = this;
+
+        this._legend = $('<div class="legend">')
+            .appendTo(this.element);
+
+        // Apply legend on changes to markers and bars
+        this.element.on('bulletchart:setOption', function (event, data) {
+            switch (data.option) {
+                case 'markers':
+                    createLegend(data.current, self.options.bars, self);
+                    break;
+                case 'bars':
+                    createLegend(self.options.markers, data.current, self);
+                    break;
+                default:
+            };
+        });
+
+
+        this._super();
+
+        this._setOption('legend', this.options.legend);
 
     },
     _destroy : function () {
+        this.element.find('.legend').empty();
 
+        this._super();
     },
     _setOption : function ( key, vallue ) {
 
