@@ -141,7 +141,7 @@ $.widget('light.bulletchart_legned', $.light.bulletchart, {
     _destroy : function () {
 
     },
-    _setOption : function ( keym vallue ) {
+    _setOption : function ( key, vallue ) {
 
     }
 

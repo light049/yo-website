@@ -2,9 +2,9 @@ require.config({
     baseUrl: '',
     paths: {
         // 3rd party js libs define
-        'jquery'           : 'components/jquery/jquery',
-        'jquery-ui'        : 'components/jquery-ui/ui/jquery-ui',
-        'underscore'       : 'components/underscore/underscore',
+        'jquery'           : 'bower_components/jquery/jquery',
+        'jquery-ui'        : 'bower_components/jquery-ui/ui/jquery-ui',
+        'underscore'       : 'bower_components/underscore/underscore',
 
         // customized js components
         'tm_grid'          : 'js/tm_components/tm_grid',
@@ -12,13 +12,13 @@ require.config({
 
         // stylesheets define
         'css_main'         : 'styles/main',
-        'css_jquery-ui'    : 'components/jquery-ui/themes/ui-lightness/jquery-ui',
+        'css_jquery-ui'    : 'bower_components/jquery-ui/themes/ui-lightness/jquery-ui',
         'css_tm_grid'      : 'styles/tm_components/tm_grid',
         'css_bullet_chart' : 'styles/tm_components/bullet_chart'
     },
     map: {
         '*': {
-            'css': 'components/require-css/css' // or whatever the path to require-css is
+            'css': 'bower_components/require-css/css' // or whatever the path to require-css is
         }
     },
     shim: {

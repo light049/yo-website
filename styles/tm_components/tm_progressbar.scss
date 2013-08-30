@@ -1,0 +1,28 @@
+$height: 25px;
+
+
+.tm-progressbar {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    height: $height;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+
+    label {
+        float: left;
+        height: $height;
+        line-height: $height;
+        margin-left: 3px;
+    }
+    .bar {
+        background: #f00;
+        color: #fff;
+        overflow: hidden;
+        position: absolute;
+        width: 0%;
+    }
+}
