@@ -1,12 +1,13 @@
 .chart-container{
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    padding: 15px 15px 25px;
+    // bordㄡer: 1px solid #ccc;
+    margin: 10px 15px 20px;
+    padding: 0;
+    position: relative;
 
     .tick-bar {
         background: #eee;
         border-bottom: 1px solid #ccc;
-        height: 50px;
+        height: 30px;
         position: relative;
 
         .tick {
@@ -25,5 +26,12 @@
             text-align: center;
             width: 2.1em;
         }
+    }
+
+    .bar {
+        background: rgba(200, 200, 255, 0.3);
+        height: 10px;
+        position: absolute;
+        top: 10px;
     }
 }
