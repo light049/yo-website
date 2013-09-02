@@ -1,37 +1,81 @@
-.chart-container{
-    // bordㄡer: 1px solid #ccc;
-    margin: 10px 15px 20px;
-    padding: 0;
-    position: relative;
+.bullet-chart {
+    font-size: 11px;
+    margin: 10px 0;
 
-    .tick-bar {
-        background: #eee;
-        border-bottom: 1px solid #ccc;
-        height: 30px;
-        position: relative;
+    .legend {
+        border: 1px solid #ccc;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 7px;
+        max-width: 300px;
 
-        .tick {
-            background: #ccc;
-            bottom: -5px;
-            height: 5px;
-            position: absolute;
-            width: 1px;
-        }
-        .tick-label {
-            bottom: -2em;
-            color: #999;
-            font-size: 0.6em;
-            margin-left: -1.05em;
-            position: absolute;
-            text-align: center;
-            width: 2.1em;
+        .legend-item {
+            display: inline-block;
+            line-height: 1.2em;
+            margin: 0 10px 0 5px;
+            padding: 3px;
+            min-width: 100px;
+
+            .legend-symbol {
+                background: #ccc;
+                display: inline-block;
+                height: 1.2em;
+                margin: 0 5px 0 0;
+                vertical-align: middle;
+            }
+            .marker {
+                width: 2px;
+            }
+            .bar {
+                width: 5px;
+            }
+
+            &:hover {
+                background: #eed;
+                cursor: pointer;
+            }
         }
     }
 
-    .bar {
-        background: rgba(200, 200, 255, 0.3);
-        height: 10px;
-        position: absolute;
-        top: 10px;
+
+    .chart-container{
+        // border: 1px solid #ccc;
+        margin: 5px 5px 20px;
+        padding: 0;
+        position: relative;
+
+        .tick-bar {
+            background: #eee;
+            border-bottom: 1px solid #ccc;
+            height: 30px;
+            position: relative;
+
+            .tick {
+                background: #ccc;
+                bottom: -5px;
+                height: 5px;
+                position: absolute;
+                width: 1px;
+            }
+            .tick-label {
+                bottom: -2em;
+                color: #999;
+                font-size: 0.6em;
+                margin-left: -1.05em;
+                position: absolute;
+                text-align: center;
+                width: 2.1em;
+            }
+        }
+
+        .bar {
+            background: rgba(200, 200, 255, 0.3);
+            height: 10px;
+            position: absolute;
+            top: 10px;
+        }
+        .deep_gray {
+            background: rgba(50, 0, 0, 0.1);
+        }
     }
 }

@@ -64,7 +64,7 @@
 
             var items = $.map(markers, function (item, index) {
                     return $.extend({
-                        type  : 'markers',
+                        type  : 'marker',
                         index : index
                     }, item);
                 }).concat($.map(bars, function (item, index) {

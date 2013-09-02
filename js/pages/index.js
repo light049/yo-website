@@ -44,7 +44,7 @@ function ($, css) {
                     {
                         title : 'Projected Target',
                         value : 75,
-                        css   : ''
+                        css   : 'deep_gray'
                     },
                     {
                         title : 'Actual Target',
