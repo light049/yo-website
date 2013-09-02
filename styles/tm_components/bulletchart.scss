@@ -1,6 +1,11 @@
 .bullet-chart {
     font-size: 11px;
     margin: 10px 0;
+    .blue { background-color: blue !important; }
+    .red { background-color: red !important; }
+    .cyan { background-color: cyan !important; }
+    .green { background-color: green !important; }
+    .gray { background-color: gray !important; }
 
     .legend {
         border: 1px solid #ccc;
@@ -12,9 +17,12 @@
         .legend-item {
             display: inline-block;
             line-height: 1.2em;
-            margin: 0 10px 0 5px;
-            padding: 3px;
+            margin: 0 10px 0 10px;
             min-width: 100px;
+            max-width: 280px;
+            padding: 3px;
+            text-indent: -10px;
+            word-wrap: break-word;
 
             .legend-symbol {
                 background: #ccc;
@@ -24,6 +32,7 @@
                 vertical-align: middle;
             }
             .marker {
+                margin-right: 8px;
                 width: 2px;
             }
             .bar {
@@ -31,7 +40,7 @@
             }
 
             &:hover {
-                background: #eed;
+                background: #eee;
                 cursor: pointer;
             }
         }
@@ -73,9 +82,6 @@
             height: 10px;
             position: absolute;
             top: 10px;
-        }
-        .deep_gray {
-            background: rgba(50, 0, 0, 0.1);
         }
     }
 }

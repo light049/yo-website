@@ -7,7 +7,7 @@ define([
     'jquery-ui',
     'underscore',
     'tm_grid',
-    'bullet_chart'
+    'bulletchart_legned'
 ],
 function ($, css) {
     $(function() {
@@ -39,12 +39,12 @@ function ($, css) {
             progressbar = $('.percent')
                 .progressbar({value: 20}),
             bulletChart = $('.chart').bulletchart_legned({
-                size: 86,
+                size: 50,
                 bars: [
                     {
                         title : 'Projected Target',
                         value : 75,
-                        css   : 'deep_gray'
+                        css   : 'gray'
                     },
                     {
                         title : 'Actual Target',
