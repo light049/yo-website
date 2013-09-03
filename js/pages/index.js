@@ -63,15 +63,13 @@ function ($, css) {
                         value : 50,
                         css   : 'red'
                     }
-                ],
-
-                ticks: [0, 25, 50, 75, 100]
+                ]
             });
 
-        // bulletChart.bulletchart_legned('option', 'bars', [{
-        //     title : 'New Marker',
-        //     value : 50
-        // }]);
+        bulletChart.bulletchart_legned('option', 'bars', [{
+            title : 'New Marker',
+            value : 50
+        }]);
 
         console.log(bulletChart.bulletchart_legned('option'))
 
