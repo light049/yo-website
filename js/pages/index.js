@@ -39,7 +39,7 @@ function ($, css) {
             progressbar = $('.percent')
                 .progressbar({value: 20}),
             bulletChart = $('.chart').bulletchart_legned({
-                size: 50,
+                size: 86,
                 bars: [
                     {
                         title : 'Projected Target',
@@ -63,15 +63,17 @@ function ($, css) {
                         value : 50,
                         css   : 'red'
                     }
-                ]
+                ],
+
+                ticks: [0, 25, 50, 75, 100]
             });
 
-        bulletChart.bulletchart_legned('option', 'bars', [{
-            title : 'New Marker',
-            value : 50
-        }]);
+        // bulletChart.bulletchart_legned('option', 'bars', [{
+        //     title : 'New Marker',
+        //     value : 50
+        // }]);
 
-        console.log(bulletChart.bulletchart_legned('option'))
+        // console.log(bulletChart.bulletchart_legned('option'))
 
         // progressbar.progressbar('value', 10);
         // console.log(progressbar.progressbar('value'));

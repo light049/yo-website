@@ -95,7 +95,7 @@
         '_setOption' : function ( key, value ) {
             // console.log('setOption start!');
 
-            console.log('set option: ', key);
+            // console.log('set option: ', key);
 
             var self  = this,
                 prev  = this.options[key],
@@ -131,7 +131,7 @@
             // console.log('setOption done!');
         },
         _triggerOptionChanged : function (optionKey, previousValue, currentValue) {
-            console.log('triggerOptionCganged!');
+            // console.log('triggerOptionCganged!');
 
             this._trigger('setOption', {type: 'setOption'}, {
                 option   : optionKey,

@@ -53,7 +53,7 @@
 
             // Apply legend on changes to markers and bars
             this.element.on('bulletchart:setoption', function (event, data) {
-                console.log(data);
+                // console.log(data);
                 switch (data.option) {
                     case 'markers':
                         createLegend(data.current, self.options.bars, self);
@@ -67,8 +67,9 @@
 
             // listen to clicks on the legned-items
             this._on({
-                'click .legned-item' : function (event) {
-                    var elt = $(event.event.currentTarget),
+                'click .legend-item': function (event) {
+                    console.log('msg');
+                    var elt = $(event.currentTarget),
                         item = elt.data('chart-item'),
                         selector = '[' + item.type + '-index=' + item.index + ']';
 
@@ -90,6 +91,7 @@
         },
         _destroy : function () {
             this.element.find('.legend').empty();
+            this._off(this.element, 'click .legend-item');
 
             this._super();
         },
