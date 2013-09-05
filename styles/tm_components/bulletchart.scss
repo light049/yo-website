@@ -1,3 +1,12 @@
+// sass
+@mixin opacity($value) {
+    opacity: #{"." + $value};
+    filter: alpha(opacity=$value);
+    -ms-filter: "alpha(opacity=$value)";
+    -khtml-opacity: #{"." + $value};
+    -moz-opacity: #{"." + $value};
+}
+
 .bullet-chart {
     font-size: 11px;
     margin: 10px 0;
@@ -34,6 +43,7 @@
             }
             .legend-label {
                 display: inline-block;
+                height: 1.2em;
                 min-width: 100px;
                 max-width: 280px;
                 overflow: hidden;
@@ -53,7 +63,9 @@
                 cursor: pointer;
             }
         }
-        .fade { opacity: 0.5; }
+        .fade {
+            @include opacity(50);
+        }
     }
 
 

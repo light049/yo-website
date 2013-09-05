@@ -17,13 +17,13 @@
 
             $.each(items, function (index, item) {
                 // console.log(item)
-                var marker = $('<span class="legend-symbol">')
+                var marker = $('<span class="legend-symbol" />')
                         .addClass(item.type)
                         .addClass(item.css),
-                    label = $('<span class="legend-label">')
+                    label = $('<span class="legend-label" />')
                         .text(item.title);
 
-                $('<div class="legend-item">')
+                $('<div class="legend-item" />')
                     .append(marker)
                     .append(label)
                     .data('chart-item', {
@@ -68,10 +68,10 @@
             // listen to clicks on the legned-items
             this._on({
                 'click .legend-item': function (event) {
-                    console.log('msg');
                     var elt = $(event.currentTarget),
                         item = elt.data('chart-item'),
                         selector = '[' + item.type + '-index=' + item.index + ']';
+                    console.log(selector);
 
                     this.element.find(selector).fadeToggle();
                     elt.toggleClass("fade");
